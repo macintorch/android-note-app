@@ -29,8 +29,15 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         super.onOptionsItemSelected(item);
 
+        if (item.getItemId() == R.id.add_note) {
+            Intent intent = new Intent(getApplicationContext(), NoteEditorActivity.class);
 
-        return true;
+            startActivity(intent);
+
+            return true;
+        }
+
+        return false;
     }
 
     static ArrayList<String> notes = new ArrayList<>();
